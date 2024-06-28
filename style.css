@@ -344,3 +344,34 @@ img {
         max-width: 700px;
     }
 }
+
+/* Additional Media Queries */
+@media (max-width: 768px) {
+  .main-heading {
+      font-size: 1.5rem;
+  }
+  .login__form {
+      max-width: 100%;
+      padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-heading {
+      font-size: 1.25rem;
+  }
+  .login__form {
+      max-width: 100%;
+      padding: 1.5rem 1rem;
+  }
+}
+
+/* Message Styling */
+#message {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: none; /* Hidden by default, shown when needed */
+}
+
