@@ -45,6 +45,7 @@ img {
     height: 100vh;
     display: grid;
     align-items: center;
+    justify-content: center;
     z-index: 1;
 }
 
@@ -173,6 +174,7 @@ img {
 
 .login__form {
     position: relative;
+    width: 486px;
     background-color: hsla(0, 0%, 10%, 0.1);
     border: 2px solid var(--white-color);
     margin-inline: 1.5rem;
@@ -311,14 +313,14 @@ img {
 
 
 /* for medium devices */
-@media screen and (min-width: 576px) {
+@media  (max-width: 576px) {
     .login {
         justify-content: center;
     }
 
     .login__form {
-        width: 432px;
-        padding: 4rem 3rem 3.5rem;
+        width: 400px;
+        padding: 5rem 3rem 5.5rem;
         border-radius: 1.5rem;
     }
 
