@@ -48,7 +48,7 @@ nextButton.addEventListener("click", function (e) {
 
 // Event listener for the quote form submission
 document.getElementById("quote-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); 
     document.getElementById("message").textContent = "Submitting..";
     document.getElementById("message").style.display = "block";
     submitButton.disabled = true;
