@@ -1,78 +1,48 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <img src="8275340.jpg" alt="login image" class="login__img">
-    <h2 class="main-heading">Samastha Motto Competition</h2>
-
-    <div class="login">
-        <!-- Step 1: Personal Details Form -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Inshirah Programmes</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
         <form id="personal-details-form" class="login__form" method="POST" name="theform">
-            <h1 class="login__title">Contestant Details</h1>
-            <div class="login__content">
-                <div class="login__box">
-                    <i class="bx bx-user login__icon"></i>
-                    <div class="login__box-input">
-                        <input class="login__input" type="text" placeholder=" " name="ClientName" required />
-                        <label class="login__label">Name</label>
-                    </div>
-                </div>
-                <div class="login__box">
-                    <i class="bx bx-envelope login__icon"></i>
-                    <div class="login__box-input">
-                        <input class="login__input" type="text" placeholder=" "  name="Email" required />
-                        <label class="login__label">Place</label>
-                    </div>
-                </div>
-                <div class="login__box">
-                    <i class="bx bx-phone login__icon"></i>
-                    <div class="login__box-input">
-                        <input class="login__input" type="tel" placeholder=" "  name="PhoneNumber" required />
-                        <label class="login__label">Phone Number</label>
-                    </div>
-                </div>
-                <div class="login__box">
-                    <i class='bx bxs-graduation login__icon'></i>
-                    <div class="login__box-input">
-                        <input class="login__input" type="text" placeholder=" "  name="Class" required />
-                        <label class="login__label">Class</label>
-                    </div>
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <button class="btn" type="button" id="next-button">Enter Competition</button>
-                </div>
-            </div>
+          <h2>Samastha Motto Competition</h2>
+           <p>Contestant Details</p>
+          <div class="input__group">
+            <label for="email">Name</label>
+            <input type="text" placeholder="Enter your e-mail" name="ClientName" required />
+          </div>
+          <div class="input__group">
+            <label for="email">Place</label>
+            <input type="text" placeholder="Enter your place" name="Email" required />
+          </div>
+          <div class="input__group">
+            <label for="email">Phone Number</label>
+            <input type="text" placeholder="Enter your Phone number" name="PhoneNumber" required />
+          </div>
+          <div class="input__group">
+            <label for="email">Class</label>
+            <input type="text" placeholder="write your class" name="Class" required />
+          </div>
+          <button class="btn" type="button" id="next-button">Enter Competition</button>
         </form>
 
-        <!-- Step 2: Quote Form -->
-        <form id="quote-form" class="login__form" method="POST" style="display: none;">
-            <h1 class="login__title">Write down your Motto</h1>
-            <div class="login__content">
-                <div class="login__box">
-                    <i class="bx bx-message-square-dots login__icon"></i>
-                    <div class="login__box-input">
-                        <input class="login__input" type="text" placeholder=" " name="Quote" required />
-                        <label class="login__label">Motto</label>
-                    </div>
-                </div>
-            </div>
-            <div class="field is-grouped">
-                <div class="control">
-                    <button class="btn" type="submit" id="submit-button">Submit</button>
-                </div>
-            </div>
-        </form>
+         <!-- Step 2: Quote Form -->
+         <form id="quote-form" class="login__form" method="POST" style="display: none;">
+          <h2>Write down your Motto</h2>
+           <div class="input__group">
+             <label for="Motto">Motto</label>
+             <input type="text" placeholder="Write your motto" name="Quote" required />
+           </div>
+           <button class="btn" type="submit" id="submit-button">Submit</button>
+         </form>
+         <div id="message"></div>
+      </div>
     </div>
-    <div id="message"></div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

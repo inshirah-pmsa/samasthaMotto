@@ -13,7 +13,7 @@ function checkForms() {
         emailInput.value.trim() !== '' &&
         phoneInput.value.trim() !== '' &&
         classInput.value.trim() !== '') {
-        nextButton.style.display = 'block';
+        nextButton.style.display = 'inline-grid';
     } else {
         nextButton.style.display = 'none';
     }
@@ -22,7 +22,7 @@ function checkForms() {
 // Function to check if the quote input is filled
 function checkQuoteForm() {
     if (quoteInput.value.trim() !== '') {
-        submitButton.style.display = 'block';
+        submitButton.style.display = 'inline-grid';
     } else {
         submitButton.style.display = 'none';
     }
@@ -43,13 +43,15 @@ submitButton.style.display = 'none';
 nextButton.addEventListener("click", function (e) {
     e.preventDefault();
     document.getElementById("personal-details-form").style.display = "none";
-    document.getElementById("quote-form").style.display = "block";
+    document.getElementById("quote-form").style.display = "grid";
 });
 
 // Event listener for the quote form submission
 document.getElementById("quote-form").addEventListener("submit", function (e) {
     e.preventDefault(); 
     document.getElementById("message").textContent = "Submitting..";
+    document.getElementById("message").style.marginTop = "10px";
+    document.getElementById("message").style.color = "white";
     document.getElementById("message").style.display = "block";
     submitButton.disabled = true;
 
@@ -88,6 +90,7 @@ document.getElementById("quote-form").addEventListener("submit", function (e) {
         })
         .then(function (data) {
             document.getElementById("message").textContent = "Data submitted successfully!";
+            document.getElementById("message").style.marginTop = "10px";
             document.getElementById("message").style.backgroundColor = "green";
             document.getElementById("message").style.color = "beige";
             submitButton.disabled = false;
@@ -97,7 +100,7 @@ document.getElementById("quote-form").addEventListener("submit", function (e) {
             setTimeout(function () {
                 document.getElementById("message").textContent = "";
                 document.getElementById("message").style.display = "none";
-                document.getElementById("personal-details-form").style.display = "block";
+                document.getElementById("personal-details-form").style.display = "grid";
                 document.getElementById("quote-form").style.display = "none";
                 nextButton.style.display = 'none'; // Reset the next button visibility
                 submitButton.style.display = 'none'; // Reset the submit button visibility
